@@ -1,0 +1,69 @@
+{
+  "name": "teja",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "install:ci": "npm ci",
+    "dev": "node scripts/run-framework.mjs dev",
+    "build": "node scripts/run-framework.mjs build",
+    "start": "node scripts/local-start.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "db:generate": "drizzle-kit generate",
+    "check:project": "node scripts/check-project.mjs",
+    "db:status:local": "node scripts/db-migrate.mjs status",
+    "db:migrate:local": "node scripts/db-migrate.mjs apply",
+    "db:tables:local": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config .wrangler/d1-migrate.wrangler.json --persist-to .wrangler/state --command \"SELECT name FROM sqlite_master WHERE type='table' ORDER BY name\"",
+    "test": "node --no-warnings tests/real-flows.mjs && node --no-warnings tests/card-checkout.mjs && node --no-warnings tests/role-access.mjs && node --no-warnings tests/listing-upgrade.mjs && node --no-warnings tests/map-discovery.mjs && node --no-warnings tests/format-vision.mjs && node --no-warnings tests/migration-plan.mjs && node --no-warnings tests/schema-not-ready.mjs && node tests/card-form.mjs && node tests/local-admin.mjs && node --no-warnings tests/demo-flow.mjs && node tests/directions.mjs && node --no-warnings tests/mobile-session.mjs && node --no-warnings tests/moderation.mjs && node --no-warnings tests/customer-experience.mjs && node --no-warnings tests/panel-operations.mjs && node --no-warnings tests/partner-cash.mjs",
+    "admin:setup": "node scripts/admin-setup.mjs",
+    "admin:check": "node scripts/admin-check.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "preview:export": "node scripts/export-preview.mjs"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^1.31.0",
+    "next": "16.3.4",
+    "qrcode": "^1.5.4",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwind-merge": "3.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
+    "@playwright/test": "^1.58.0",
+    "@sparticuz/chromium": "^153.0.0",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.4",
+    "json-rpc-2.0": "1.7.1",
+    "prettier": "^3.6.0",
+    "raw-body": "3.0.2",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "5.9.3",
+    "vinext": "1.0.0-beta.5",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module",
+  "overrides": {
+    "miniflare": {
+      "sharp": "0.35.4"
+    }
+  },
+  "packageManager": "npm@11.9.0"
+}

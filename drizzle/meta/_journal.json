@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792855639631,
+      "tag": "0000_whole_kate_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792857438749,
+      "tag": "0001_open_tenebrous",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792858189987,
+      "tag": "0002_silky_starbolt",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792859894548,
+      "tag": "0003_bored_mister_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1792868834657,
+      "tag": "0004_loud_leper_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1792868945051,
+      "tag": "0005_motionless_the_liberteens",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1792869854106,
+      "tag": "0006_faulty_wolfpack",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1792872214472,
+      "tag": "0007_wealthy_prowler",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1793188800000,
+      "tag": "0008_mock_and_mobile",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1793404800000,
+      "tag": "0009_customer_experience",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1793491200000,
+      "tag": "0010_partner_cash",
+      "breakpoints": true
+    }
+  ]
+}
